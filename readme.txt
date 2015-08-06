@@ -12,6 +12,13 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=amu02.af
 Display client logos responsive carousel with the help of a shortcode in editor as well as template page. 
 Having different carousel settings.
 
+<strong>Plugin Features</strong>
+* Simple and light weight
+* Fully responsive
+* Having different settings in admin
+* Ability to add client links to each logo
+* Auto slide option
+
 == Screenshots ==
 
 1. Back end client logo carousel settings(go to wp-admin->WP Client Logo->Logo Carousel Settings).

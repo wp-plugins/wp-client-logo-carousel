@@ -1,4 +1,4 @@
-=== WP Client Logo Carousel ===
+=== Client Logo Carousel ===
 Tags: Client, Client slider, clients slider, clients carousel, testimonial slider,clients-carousel,clients-plugin,carousel-plugin,client quotes, carousel, logo, logo slider, logo carousel, carousel slider.
 Contributors: amu02aftab
 Author: amu02aftab

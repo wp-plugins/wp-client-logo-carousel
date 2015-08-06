@@ -13,6 +13,7 @@ Display client logos responsive carousel with the help of a shortcode in editor 
 Having different carousel settings.
 
 <strong>Plugin Features</strong>
+
 * Simple and light weight
 * Fully responsive
 * Having different settings in admin

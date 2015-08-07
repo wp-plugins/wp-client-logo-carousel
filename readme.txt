@@ -38,7 +38,7 @@ This is first version no known errors found
 This is first version no known notices yet
 
 == Installation ==
-1. Upload the folder "netgo-expandable-collapsible-menu" to "/wp-content/plugins/" '
+1. Upload the folder "wp-client-logo-carousel" to "/wp-content/plugins/" '
 2. Activate the plugin through the "Plugins" menu in WordPress .
 3. Update settings for carousel going to wp-admin->WP Client Logo->Logo Carousel Settings
 4. Add	client logo going to wp-admin->WP Client Logo->Add New Client Logo..

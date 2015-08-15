@@ -42,5 +42,11 @@ This is first version no known notices yet
 2. Activate the plugin through the "Plugins" menu in WordPress .
 3. Update settings for carousel going to wp-admin->WP Client Logo->Logo Carousel Settings
 4. Add	client logo going to wp-admin->WP Client Logo->Add New Client Logo..
-6. Call shortcode to your wordpress editor directly by using [wpaft_logo_slider] .
-7. Call shortcode to your php template file using ' echo do_shortcode('[wpaft_logo_slider]'); '.
+5. Call shortcode to your wordpress editor directly, by using 
+`
+[wpaft_logo_slider]
+`
+Call shortcode to your php template file using 
+`
+<?php  echo do_shortcode('[wpaft_logo_slider]'); ?>
+`

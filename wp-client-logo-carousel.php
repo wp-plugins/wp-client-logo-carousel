@@ -3,7 +3,7 @@
  * Plugin Name: WP Client Logo Carousel
  * Plugin URI: https://aftabhusain.wordpress.com/
  * Description: Display client logos responsive carousel with the help of a shortcode.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Aftab Husain
  * Author URI: https://aftabhusain.wordpress.com/
  * License: GPLv2
@@ -49,9 +49,14 @@ add_filter('manage_posts_columns', 'wpaft_add_post_thumbnail_column', 2);
 	
 // Add the column
 function wpaft_add_post_thumbnail_column($cols){
-  $cols['wpaft_logo_thumb'] = __('Logo Image');
-   $cols['wpaft_client_url'] = __('Client Website Url');
-  return $cols;
+  	
+	global $post;
+	$pst_type=$post->post_type;
+		if( $pst_type == 'client-logo'){ 
+		$cols['wpaft_logo_thumb'] = __('Logo Image');
+		$cols['wpaft_client_url'] = __('Client Website Url');
+		}
+	return $cols;
 }
 
 // Hook into the posts an pages column managing. Sharing function callback again.
@@ -161,42 +166,17 @@ function wpaft_remove_options(){
 }
 register_uninstall_hook(__FILE__, 'wpaft_remove_options');
 
-// Enqueue scripts and stylesheets on the pages where the shortcode has been used
-function wpaft_enqueue_shortcode_files($posts) {
-    if ( empty($posts) )
-        return $posts;
- 
-    $found_slider = false;
-    foreach ($posts as $post) {
-        if ( has_shortcode($post->post_content, 'wpaft_logo_slider') ){
-        	$found_slider = true;
-        	break;
-        }
-    }
- 
-    if ($found_slider){
-        wp_enqueue_style( 'wpaft-logo-slider', plugins_url('includes/client-carousel.css', __FILE__), array(), '1.0', 'all' );
-        wp_enqueue_script( "wpaft-logo-slider", plugins_url('includes/client-carousel.js', __FILE__ ), array('jquery') );
-        $slider_settings = get_option('wpaft_slider_settings');
-        wp_localize_script( 'wpaft-logo-slider', 'wpaft', $slider_settings);
-    }
-    return $posts;
-}
-add_action('the_posts', 'wpaft_enqueue_shortcode_files');
 
-// If the function has_sortcode() is not defined, define it
-if(!function_exists('has_shortcode')){
-	function has_shortcode( $content, $tag ) {
-		if(stripos($content, '['.$tag.']') !== false)
-			return true;
-		return false;
-	}
-}
 
 // Setup the shortcode
 function wpaft_logo_slider_callback( $atts ) {
-	//print_r($atts);
-	//echo 'COMES';
+	
+	//include css and js start
+	wp_enqueue_style( 'wpaft-logo-slider', plugins_url('includes/client-carousel.css', __FILE__), array(), '1.0', 'all' );
+	wp_enqueue_script( "wpaft-logo-slider", plugins_url('includes/client-carousel.js', __FILE__ ), array('jquery') );
+	$slider_settings = get_option('wpaft_slider_settings');
+	wp_localize_script( 'wpaft-logo-slider', 'wpaft', $slider_settings);
+	//include css and js end
 	ob_start();
     extract( shortcode_atts( array (
         'type' => 'client-logo',

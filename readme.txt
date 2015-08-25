@@ -5,7 +5,7 @@ Author: amu02aftab
 Tested up to: 4.2.2
 License: GPLv2
 Requires at least: 3.5.0
-Stable tag: 1.0.1
+Stable tag: 1.0
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=amu02.aftab@gmail.com&item_name=Donation+WP+Client+Testimonial
 
 == Description ==

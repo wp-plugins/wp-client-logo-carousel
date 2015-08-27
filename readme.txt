@@ -2,7 +2,7 @@
 Tags: Client, Client slider, clients slider, clients carousel, testimonial slider,clients-carousel,clients-plugin,carousel-plugin,client quotes, carousel, logo, logo slider, logo carousel, carousel slider.
 Contributors: amu02aftab
 Author: amu02aftab
-Tested up to: 4.2.2
+Tested up to: 4.3
 License: GPLv2
 Requires at least: 3.5.0
 Stable tag: 1.0

@@ -91,7 +91,7 @@ function wpaft_display_post_thumbnail_column($col, $id){
 // client logo Meta Box
 function wpaft_clientlogo_add_meta_box(){
 // add meta Box
- remove_meta_box( 'postimagediv', 'post', 'side' );
+ remove_meta_box( 'postimagediv', 'client-logo', 'side' );
  add_meta_box('postimagediv', __('Client Logo'), 'post_thumbnail_meta_box', 'client-logo', 'normal', 'high');
  add_meta_box('wpaft_clientlogo_meta_id', __('Client Website Url'), 'wpaft_meta_callback', 'client-logo', 'normal', 'high');
 }

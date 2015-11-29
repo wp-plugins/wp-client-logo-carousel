@@ -180,8 +180,8 @@ function wpaft_logo_slider_callback( $atts ) {
 	ob_start();
     extract( shortcode_atts( array (
         'type' => 'client-logo',
-        'order' => 'date',
-        'orderby' => 'title',
+        'order' => 'DESC',
+        'orderby' => 'date',
         'posts' => -1,
     
     ), $atts ) );
